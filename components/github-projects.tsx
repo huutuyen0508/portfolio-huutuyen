@@ -1,10 +1,10 @@
 import { ArrowUpRight, Code2 } from "lucide-react"
 
 const projects = [
-  { title: "E-commerce Dashboard", description: "A focused analytics workspace for understanding revenue, products, and customer behavior at a glance.", tags: ["Next.js", "TypeScript", "Charts"], image: "/ecommerce-dashboard.png", href: "https://github.com/lilhop36/ecommerce-dashboard" },
-  { title: "Task Management App", description: "A calm, collaborative system for turning large projects into clear, actionable work.", tags: ["React", "Node.js", "PostgreSQL"], image: "/task-management-app.png", href: "https://github.com/lilhop36/task-management-app" },
-  { title: "Design System Components", description: "Accessible, composable UI primitives designed to help teams move quickly without losing craft.", tags: ["React", "Storybook", "Tailwind"], image: "/design-system-components.png", href: "https://github.com/lilhop36/design-system" },
-  { title: "Analytics Dashboard", description: "A responsive data story that turns noisy metrics into decisions for modern product teams.", tags: ["Python", "FastAPI", "Recharts"], image: "/analytics-dashboard-charts.png", href: "https://github.com/lilhop36/analytics-dashboard" },
+  { title: "HolaSmile Dental Clinic Management System", description: "A modern dental clinic management system supporting appointment scheduling, patient records, medical examination workflows, and administrative operations.", tags: ["Next.js", "TypeScript", "Tailwind CSS"], href: "https://github.com/tuyen583/HeThongQuanLiPhongKhamHOLASMILE" },
+  { title: "Production GraphRAG vs Flat RAG", description: "An end-to-end AI retrieval system comparing traditional vector-based RAG with a production-oriented GraphRAG architecture using knowledge graphs and hybrid retrieval.", tags: ["GraphRAG", "Neo4j", "FAISS"], href: "https://github.com/huutuyen0508/K4-Track3-2A202601520-NguyenHuuTuyen" },
+  { title: "Production RAG Pipeline", description: "A modular Retrieval-Augmented Generation pipeline combining document processing, hybrid retrieval, reranking, LLM generation, and systematic RAG evaluation.", tags: ["Python", "Qdrant", "RAGAS"], href: "https://github.com/huutuyen0508/K34-Day18-Production-RAG" },
+  { title: "Multi-Agent Research System", description: "A structured multi-agent AI system where a Supervisor coordinates specialized Researcher, Analyst, and Writer agents to produce a final researched response.", tags: ["LangGraph", "Python", "Multi-Agent"], href: "https://github.com/huutuyen0508/VinUni-AI20k-K4-Track3-Lab20-MultiAgent" },
 ]
 
 export default function GitHubProjects() {
