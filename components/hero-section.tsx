@@ -29,7 +29,7 @@ export function HeroSection() {
         </div>
         <div className="relative mx-auto w-full max-w-sm lg:mb-3">
           <div className="overflow-hidden rounded-[2rem] border border-border bg-secondary shadow-2xl shadow-accent/5">
-            <Image src="/abdi-profile.jpg" alt="Nguyễn Hữu Tuyến" width={520} height={640} className="aspect-[4/5] w-full object-cover grayscale transition-all duration-700 hover:grayscale-0" priority />
+            <Image src="/nguyen-huu-tuyen-portrait.jpg" alt="Nguyễn Hữu Tuyến" width={520} height={640} className="aspect-[4/5] w-full object-cover object-[50%_56%] grayscale transition-all duration-700 hover:grayscale-0" priority />
           </div>
           <div className="absolute -bottom-5 -left-5 rounded-2xl border border-border bg-background px-4 py-3 font-mono text-xs text-muted-foreground shadow-lg">01 / 04<br /><span className="text-foreground">Selected work</span></div>
         </div>
