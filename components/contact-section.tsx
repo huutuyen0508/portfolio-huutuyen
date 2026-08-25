@@ -29,12 +29,12 @@ export function ContactSection() {
     setIsSubmitting(true)
 
     try {
-      // Replace with your actual form submission endpoint
-      // Example: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) })
-      console.log("Form submitted:", formData)
+      const subject = encodeURIComponent(`Portfolio message from ${formData.name}`)
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`,
+      )
 
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      window.open(`mailto:huutuyen050803@gmail.com?subject=${subject}&body=${body}`, "_blank")
 
       setSubmitStatus("success")
       setFormData({ name: "", email: "", message: "" })
@@ -63,13 +63,13 @@ export function ContactSection() {
         {/* Social Links */}
         <div className="flex gap-6 justify-center mb-12 flex-wrap">
           <a
-            href="mailto:abdigaboma@gmail.com"
+            href="mailto:huutuyen050803@gmail.com"
             className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-background rounded-lg hover:bg-accent/90 transition-colors font-medium"
           >
             <Mail size={20} /> Email Me
           </a>
           <a
-            href="https://github.com/lilhop36"
+            href="https://github.com/huutuyen0508"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-lg hover:border-accent hover:text-accent transition-colors font-medium"
@@ -153,12 +153,12 @@ export function ContactSection() {
           {/* Status Messages */}
           {submitStatus === "success" && (
             <div className="p-4 bg-green-500/10 border border-green-500/30 rounded-lg text-green-600 text-center">
-              ✓ Message sent successfully! I'll get back to you soon.
+              Message sent successfully! I&apos;ll get back to you soon.
             </div>
           )}
           {submitStatus === "error" && (
             <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-600 text-center">
-              ✗ Error sending message. Please try again or email me directly.
+              Failed to send message. Please try again or contact me directly by email.
             </div>
           )}
         </form>
