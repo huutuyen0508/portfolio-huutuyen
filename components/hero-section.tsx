@@ -25,7 +25,7 @@ export function HeroSection() {
               Let&apos;s talk <ArrowUpRight size={17} />
             </a>
           </div>
-          <div className="mt-14 flex items-center gap-2 text-sm text-muted-foreground"><MapPin size={15} className="text-accent" /> Addis Ababa, Ethiopia</div>
+          <div className="mt-14 flex items-center gap-2 text-sm text-muted-foreground"><MapPin size={15} className="text-accent" /> Hanoi , VietNam</div>
         </div>
         <div className="relative mx-auto w-full max-w-sm lg:mb-3">
           <div className="overflow-hidden rounded-[2rem] border border-border bg-secondary shadow-2xl shadow-accent/5">
