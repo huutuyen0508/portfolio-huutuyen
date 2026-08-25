@@ -10,7 +10,7 @@ export function HeroSection() {
             <span className="h-2 w-2 rounded-full bg-accent" />
             Available for select collaborations
           </div>
-          <p className="mb-5 font-mono text-sm uppercase tracking-[0.24em] text-accent">AI / ML Engineer · Addis Ababa</p>
+          <p className="mb-5 font-mono text-sm uppercase tracking-[0.24em] text-accent">AI / ML Engineer · FRONT-END DEVELOPER</p>
           <h1 className="max-w-4xl text-balance text-5xl font-semibold leading-[0.95] tracking-[-0.06em] md:text-8xl">
             Building intelligent systems with a human point of view.
           </h1>
