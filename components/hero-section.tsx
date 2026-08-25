@@ -1,66 +1,37 @@
-// Hero section with name, profession, and call-to-action buttons
-// Customize the name, title, and bio with your own information
-
 import Image from "next/image"
+import { ArrowDown, ArrowUpRight, MapPin } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 py-20 bg-background">
-      <div className="max-w-5xl mx-auto w-full">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left side - Text content */}
-          <div>
-            <p className="text-accent font-semibold mb-2">Hi, I'm Abdi Garoma</p>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance">
-              Software Engineer | Architect of Innovative Digital Solutions
-            </h1>
-            <p className="text-lg text-muted-foreground mb-8 text-balance">
-              I specialize in building high-quality mobile and web applications using modern technologies. From React
-              Native to Next.js, I bring ideas to life with clean code and intuitive design.
-            </p>
-
-            {/* Location and stats */}
-            <div className="flex gap-6 mb-8 flex-wrap">
-              <div>
-                <p className="text-muted-foreground text-sm">Location</p>
-                <p className="font-semibold">Addis Ababa, Ethiopia</p>
-              </div>
-              <div>
-                <p className="text-muted-foreground text-sm">Repositories</p>
-                <p className="font-semibold">13 repositories</p>
-              </div>
-            </div>
-
-            {/* Call-to-Action Buttons */}
-            <div className="flex gap-4 flex-wrap">
-              <a
-                href="#projects"
-                className="px-8 py-3 bg-accent text-background rounded-lg hover:bg-accent/90 transition-colors font-semibold"
-              >
-                View My Work
-              </a>
-              <a
-                href="#contact"
-                className="px-8 py-3 border border-border rounded-lg hover:border-accent transition-colors font-semibold"
-              >
-                Get In Touch
-              </a>
-            </div>
+    <section id="home" className="relative overflow-hidden border-b border-border px-6 pb-20 pt-32 md:px-10 md:pb-28 md:pt-44">
+      <div className="mx-auto grid max-w-6xl items-end gap-12 lg:grid-cols-[1.35fr_.65fr]">
+        <div>
+          <div className="mb-8 flex items-center gap-3 text-sm text-muted-foreground">
+            <span className="h-2 w-2 rounded-full bg-accent" />
+            Available for select collaborations
           </div>
-
-          {/* Right side - Profile image */}
-          <div className="flex justify-center">
-            <div className="w-64 h-64 rounded-lg overflow-hidden shadow-xl border border-border">
-              <Image
-                src="/abdi-profile.jpg"
-                alt="Abdi Garoma"
-                width={256}
-                height={256}
-                className="w-full h-full object-cover"
-                priority
-              />
-            </div>
+          <p className="mb-5 font-mono text-sm uppercase tracking-[0.24em] text-accent">AI / ML Engineer · Addis Ababa</p>
+          <h1 className="max-w-4xl text-balance text-5xl font-semibold leading-[0.95] tracking-[-0.06em] md:text-8xl">
+            Building intelligent systems with a human point of view.
+          </h1>
+          <p className="mt-8 max-w-xl text-pretty text-lg leading-8 text-muted-foreground">
+            I&apos;m Nguyễn Hữu Tuyến, an AI/ML engineer focused on LLMs, computer vision, and production-grade software that makes complex ideas useful.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a href="#projects" className="group inline-flex items-center gap-3 rounded-full bg-accent px-6 py-3 font-medium text-accent-foreground transition-transform hover:-translate-y-0.5">
+              Explore selected work <ArrowDown size={17} className="transition-transform group-hover:translate-y-1" />
+            </a>
+            <a href="mailto:nguyenhuutuyen@example.com" className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 font-medium transition-colors hover:border-accent hover:text-accent">
+              Let&apos;s talk <ArrowUpRight size={17} />
+            </a>
           </div>
+          <div className="mt-14 flex items-center gap-2 text-sm text-muted-foreground"><MapPin size={15} className="text-accent" /> Addis Ababa, Ethiopia</div>
+        </div>
+        <div className="relative mx-auto w-full max-w-sm lg:mb-3">
+          <div className="overflow-hidden rounded-[2rem] border border-border bg-secondary shadow-2xl shadow-accent/5">
+            <Image src="/abdi-profile.jpg" alt="Nguyễn Hữu Tuyến" width={520} height={640} className="aspect-[4/5] w-full object-cover grayscale transition-all duration-700 hover:grayscale-0" priority />
+          </div>
+          <div className="absolute -bottom-5 -left-5 rounded-2xl border border-border bg-background px-4 py-3 font-mono text-xs text-muted-foreground shadow-lg">01 / 04<br /><span className="text-foreground">Selected work</span></div>
         </div>
       </div>
     </section>

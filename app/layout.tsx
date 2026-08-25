@@ -9,22 +9,14 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
 export const metadata: Metadata = {
-  title: "Abdi - Software Engineer",
-  description: "Full-stack developer from Ethiopia showcasing projects and experience",
-  generator: "v0.app",
+  title: "Nguyễn Hữu Tuyến — AI/ML Engineer",
+  description: "Portfolio of Nguyễn Hữu Tuyến, an AI/ML engineer building intelligent products and reliable software.",
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}>
-        <ThemeProvider>{children}</ThemeProvider>
-        <Analytics />
-      </body>
+    <html lang="en" suppressHydrationWarning className="bg-background">
+      <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}><ThemeProvider>{children}</ThemeProvider><Analytics /></body>
     </html>
   )
 }

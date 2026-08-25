@@ -1,136 +1,28 @@
-"use client"
+import { ArrowUpRight, Code2 } from "lucide-react"
 
-import { useEffect, useState } from "react"
-import { Github, Star, Code2 } from "lucide-react"
+const projects = [
+  { title: "E-commerce Dashboard", description: "A focused analytics workspace for understanding revenue, products, and customer behavior at a glance.", tags: ["Next.js", "TypeScript", "Charts"], image: "/ecommerce-dashboard.png", href: "https://github.com/lilhop36/ecommerce-dashboard" },
+  { title: "Task Management App", description: "A calm, collaborative system for turning large projects into clear, actionable work.", tags: ["React", "Node.js", "PostgreSQL"], image: "/task-management-app.png", href: "https://github.com/lilhop36/task-management-app" },
+  { title: "Design System Components", description: "Accessible, composable UI primitives designed to help teams move quickly without losing craft.", tags: ["React", "Storybook", "Tailwind"], image: "/design-system-components.png", href: "https://github.com/lilhop36/design-system" },
+  { title: "Analytics Dashboard", description: "A responsive data story that turns noisy metrics into decisions for modern product teams.", tags: ["Python", "FastAPI", "Recharts"], image: "/analytics-dashboard-charts.png", href: "https://github.com/lilhop36/analytics-dashboard" },
+]
 
-// Interface for GitHub repository data
-interface GitHubRepo {
-  id: number
-  name: string
-  description: string | null
-  html_url: string
-  stargazers_count: number
-  language: string | null
-  topics: string[]
-}
-
-/**
- * GitHubProjects Component
- * Displays a grid of your GitHub repositories with real-time data
- * Fetches projects from GitHub API and displays them with stars, language, and links
- */
 export default function GitHubProjects() {
-  const [repos, setRepos] = useState<GitHubRepo[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-
-  useEffect(() => {
-    const fetchRepos = async () => {
-      try {
-        setLoading(true)
-        const response = await fetch("/api/github?limit=6")
-
-        if (!response.ok) {
-          throw new Error(`API error: ${response.status}`)
-        }
-
-        const data = await response.json()
-
-        if (data.error || data.length === 0) {
-          setError("Unable to load projects from GitHub")
-        } else {
-          setRepos(data)
-        }
-      } catch (err) {
-        console.error("[v0] Error in GitHubProjects:", err)
-        setError("Failed to load projects")
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchRepos()
-  }, [])
-
-  // Loading state
-  if (loading) {
-    return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {[...Array(6)].map((_, i) => (
-          <div key={i} className="bg-slate-800 rounded-lg p-6 animate-pulse h-64" />
-        ))}
-      </div>
-    )
-  }
-
-  // Error state with fallback
-  if (error || repos.length === 0) {
-    return (
-      <div className="text-center py-12">
-        <p className="text-slate-400 mb-4">{error || "No projects found"}</p>
-        <a
-          href="https://github.com/lilhop36"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
-        >
-          <Github size={20} />
-          View on GitHub
-        </a>
-      </div>
-    )
-  }
-
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {repos.map((repo) => (
-        <a
-          key={repo.id}
-          href={repo.html_url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group bg-slate-800 hover:bg-slate-700 rounded-lg p-6 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 border border-slate-700 hover:border-purple-500/50"
-        >
-          {/* Project Header */}
-          <div className="flex items-start justify-between mb-3">
-            <div className="flex-1">
-              <h3 className="text-lg font-semibold text-white group-hover:text-purple-400 transition-colors truncate">
-                {repo.name}
-              </h3>
-            </div>
-            <Github size={20} className="text-slate-400 flex-shrink-0 ml-2" />
+    <div className="grid gap-x-6 gap-y-14 md:grid-cols-2">
+      {projects.map((project, index) => (
+        <a key={project.title} href={project.href} target="_blank" rel="noopener noreferrer" className="group block">
+          <div className="mb-5 overflow-hidden rounded-2xl border border-border bg-secondary">
+            <img src={project.image} alt={`${project.title} preview`} className="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
           </div>
-
-          {/* Project Description */}
-          <p className="text-slate-400 text-sm mb-4 line-clamp-2 min-h-10">
-            {repo.description || "No description available"}
-          </p>
-
-          {/* Project Tags */}
-          <div className="flex flex-wrap gap-2 mb-4">
-            {repo.language && (
-              <span className="inline-flex items-center gap-1 px-3 py-1 bg-purple-900/30 text-purple-300 text-xs rounded-full">
-                <Code2 size={12} />
-                {repo.language}
-              </span>
-            )}
-            {repo.topics &&
-              repo.topics.slice(0, 2).map((topic) => (
-                <span key={topic} className="px-3 py-1 bg-slate-700 text-slate-300 text-xs rounded-full">
-                  {topic}
-                </span>
-              ))}
-          </div>
-
-          {/* Stars and Link */}
-          <div className="flex items-center justify-between pt-4 border-t border-slate-700">
-            <div className="flex items-center gap-1 text-slate-400">
-              <Star size={16} />
-              <span className="text-sm">{repo.stargazers_count}</span>
+          <div className="flex items-start justify-between gap-5">
+            <div>
+              <p className="mb-2 font-mono text-xs text-accent">0{index + 1} / CASE STUDY</p>
+              <h3 className="text-2xl font-medium tracking-tight group-hover:text-accent">{project.title}</h3>
+              <p className="mt-3 max-w-md leading-7 text-muted-foreground">{project.description}</p>
+              <div className="mt-4 flex flex-wrap gap-2">{project.tags.map((tag) => <span key={tag} className="rounded-full border border-border px-3 py-1 font-mono text-[11px] text-muted-foreground"><Code2 size={11} className="mr-1 inline" />{tag}</span>)}</div>
             </div>
-            <span className="text-purple-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
-              View →
-            </span>
+            <ArrowUpRight className="mt-1 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent" size={22} />
           </div>
         </a>
       ))}

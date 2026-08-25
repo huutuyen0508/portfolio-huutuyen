@@ -1,36 +1,14 @@
-// Projects section showcasing your work
-// Update project titles, descriptions, tags, and links with your own projects
-
-"use client"
-
-import { Github } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 import GitHubProjects from "./github-projects"
 
 export function ProjectsSection() {
-  return (
-    <section id="projects" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div className="mb-12">
-          <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
-          <p className="text-muted-foreground text-lg">Explore my latest work and contributions on GitHub</p>
-        </div>
-
-        <GitHubProjects />
-
-        {/* View All Projects Link */}
-        <div className="mt-12 text-center">
-          <a
-            href="https://github.com/lilhop36"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent/90 text-white rounded-lg transition-all hover:gap-3 font-medium"
-          >
-            <Github size={20} />
-            View All Projects on GitHub
-          </a>
-        </div>
+  return <section id="projects" className="border-b border-border px-6 py-24 md:px-10 md:py-32">
+    <div className="mx-auto max-w-6xl">
+      <div className="mb-14 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+        <div><p className="mb-4 font-mono text-xs uppercase tracking-[0.24em] text-accent">Selected work</p><h2 className="text-4xl font-semibold tracking-[-0.04em] md:text-6xl">Things I&apos;ve built.</h2></div>
+        <a href="https://github.com/lilhop36" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-accent">GitHub profile <ArrowUpRight size={15} /></a>
       </div>
-    </section>
-  )
+      <GitHubProjects />
+    </div>
+  </section>
 }
