@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Mail, Github, Linkedin, Send } from "lucide-react"
+import { Mail, Github, Send } from "lucide-react"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -76,14 +76,7 @@ export function ContactSection() {
           >
             <Github size={20} /> GitHub
           </a>
-          <a
-            href="https://linkedin.com/in/abdi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-lg hover:border-accent hover:text-accent transition-colors font-medium"
-          >
-            <Linkedin size={20} /> LinkedIn
-          </a>
+
         </div>
 
         {/* Contact Form */}
