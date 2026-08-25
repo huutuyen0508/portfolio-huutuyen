@@ -15,13 +15,13 @@ export function HeroSection() {
             Building intelligent systems with a human point of view.
           </h1>
           <p className="mt-8 max-w-xl text-pretty text-lg leading-8 text-muted-foreground">
-            I&apos;m Nguyễn Hữu Tuyến, an AI/ML engineer focused on LLMs, computer vision, and production-grade software that makes complex ideas useful.
+            I&apos;m Nguyễn Hữu Tuyến, with hands-on experience building projects related to AI, LLMs, RAG, GraphRAG, and Multi-Agent systems.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a href="#projects" className="group inline-flex items-center gap-3 rounded-full bg-accent px-6 py-3 font-medium text-accent-foreground transition-transform hover:-translate-y-0.5">
               Explore selected work <ArrowDown size={17} className="transition-transform group-hover:translate-y-1" />
             </a>
-            <a href="mailto:nguyenhuutuyen@example.com" className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 font-medium transition-colors hover:border-accent hover:text-accent">
+            <a href="#contact" className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 font-medium transition-colors hover:border-accent hover:text-accent">
               Let&apos;s talk <ArrowUpRight size={17} />
             </a>
           </div>
