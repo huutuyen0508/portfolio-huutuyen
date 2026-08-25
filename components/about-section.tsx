@@ -41,18 +41,13 @@ export function AboutSection() {
           {/* Bio Section */}
           <div>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              I'm a passionate Software Engineering student from Ethiopia with a love for building web and mobile
-              applications that solve real-world problems. My experience spans full-stack development, including
-              React.js, Node.js, MongoDB, Java, and Android development.
+              I&apos;m a final-year Information Technology student at the Academy of Cryptography Techniques in Hanoi, Vietnam. I have a software engineering foundation in Next.js, React, TypeScript, NestJS, RESTful APIs, databases, and Docker, with experience building modern web applications.
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              I enjoy creating clean, efficient, and scalable code, and I'm constantly learning new technologies to
-              improve my skills. I'm particularly interested in product design, user experience, and building digital
-              solutions that bring people together.
+              Recently, I have been focusing more deeply on AI Engineering, especially LLM applications, RAG, GraphRAG, Multi-Agent Systems, LangGraph, AI evaluation, and model fine-tuning. Through my projects, I am learning how AI components can be integrated into practical, production-oriented software systems.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              When I'm not programming, I like exploring innovative tech ideas, improving my productivity, and
-              experimenting with small projects that generate real value.
+              I&apos;m currently looking for an Internship or Fresher opportunity related to <strong>AI Engineering / AI-ML Engineering</strong>, where I can continue learning, gain real-world experience, strengthen my AI and software engineering skills, and contribute to meaningful products.
             </p>
           </div>
 
