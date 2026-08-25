@@ -12,9 +12,6 @@ export default function GitHubProjects() {
     <div className="grid gap-x-6 gap-y-14 md:grid-cols-2">
       {projects.map((project, index) => (
         <a key={project.title} href={project.href} target="_blank" rel="noopener noreferrer" className="group block">
-          <div className="mb-5 overflow-hidden rounded-2xl border border-border bg-secondary">
-            <img src={project.image} alt={`${project.title} preview`} className="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
-          </div>
           <div className="flex items-start justify-between gap-5">
             <div>
               <p className="mb-2 font-mono text-xs text-accent">0{index + 1} / CASE STUDY</p>

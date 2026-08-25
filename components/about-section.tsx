@@ -16,8 +16,8 @@ export function AboutSection() {
       category: "Backend",
       items: [
         { name: "Node.js", level: 85 },
-        { name: "MongoDB", level: 85 },
-        { name: "Java", level: 80 },
+        { name: "PostgreSQL", level: 85 },
+        { name: "NestJS", level: 80 },
         { name: "API Design", level: 80 },
       ],
     },
