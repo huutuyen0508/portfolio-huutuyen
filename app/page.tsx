@@ -1,6 +1,3 @@
-"use client"
-
-import { useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
 import { ServicesSection } from "@/components/services-section"
@@ -11,11 +8,9 @@ import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 
 export default function Portfolio() {
-  const [activeSection, setActiveSection] = useState("home")
-
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-accent-foreground">
-      <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
+      <Navigation />
       <main>
         <HeroSection />
         <ServicesSection />
