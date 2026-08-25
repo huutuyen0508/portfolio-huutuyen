@@ -1,18 +1,15 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Menu, X, Sun, Moon } from "lucide-react"
 import { useTheme } from "@/lib/theme-provider"
 
 export function Navigation() {
   const [activeSection, setActiveSection] = useState("home")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [mounted, setMounted] = useState(false)
   const { theme, toggleTheme } = useTheme()
-  useEffect(() => setMounted(true), [])
   const navItems = ["home", "projects", "about", "contact"]
   const handleNavClick = (item: string) => { setActiveSection(item); setIsMenuOpen(false); document.getElementById(item)?.scrollIntoView({ behavior: "smooth" }) }
-  if (!mounted) return null
   return <nav className="fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur-xl">
     <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6 md:px-10">
       <button onClick={() => handleNavClick("home")} className="font-mono text-sm font-medium tracking-tight">NT<span className="text-accent">.</span></button>
